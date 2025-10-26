@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sealia-deep text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-sealia-green text-sealia-deep px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-all duration-200;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-base;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-sealia-gray p-4;
+  }
+  
+  .card-lg {
+    @apply p-6;
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes border-shine {
+  0% {
+    border-color: rgba(224, 224, 224, 0.2);
+    box-shadow: 0 0 0 1px rgba(224, 224, 224, 0.2);
+  }
+  50% {
+    border-color: rgba(224, 224, 224, 0.6);
+    box-shadow: 0 0 0 1px rgba(224, 224, 224, 0.6), 0 0 15px rgba(224, 224, 224, 0.2);
+  }
+  100% {
+    border-color: rgba(224, 224, 224, 0.2);
+    box-shadow: 0 0 0 1px rgba(224, 224, 224, 0.2);
+  }
+}
+
+@keyframes button-shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-border-shine {
+  animation: border-shine 3s ease-in-out infinite;
+}
+
+.animate-button-shine {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: button-shine 1.5s infinite;
+}
