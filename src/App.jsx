@@ -9,8 +9,6 @@ import Home from './pages/Home'
 import VerifyDocument from './pages/VerifyDocument'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import EnhancedAuth from './pages/EnhancedAuth'
-import AuthDemo from './pages/AuthDemo'
 import EmailVerification from './pages/EmailVerification'
 import ResetPassword from './pages/ResetPassword'
 import About from './pages/About'
@@ -20,8 +18,6 @@ import Pricing from './pages/Pricing'
 import PricingPlans from './components/PricingPlans'
 import PaymentSuccess from './pages/PaymentSuccess'
 import ForgotPassword from './pages/ForgotPassword'
-import Test from './pages/Test'
-import TestPasswordReset from './pages/TestPasswordReset'
 import Onboarding from './pages/Onboarding'
 import Dashboard from './pages/Dashboard'
 import RoleBasedDashboard from './components/RoleBasedDashboard'
@@ -60,11 +56,8 @@ function App() {
           <div className="min-h-screen bg-black">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/test" element={<Test />} />
-              <Route path="/auth-demo" element={<AuthDemo />} />
-              <Route path="/test-password-reset" element={<TestPasswordReset />} />
-              <Route path="/login" element={<EnhancedAuth mode="login" />} />
-              <Route path="/register" element={<EnhancedAuth mode="signup" />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/email-verification" element={<EmailVerification />} />
               <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="/onboarding" element={<Onboarding />} />
